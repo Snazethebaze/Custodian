@@ -6,6 +6,7 @@
 ## SavedVariables: CustodianDB
 ## IconTexture: Interface\AddOns\Custodian\Media\Custodian.tga
 ## X-Category: Combat
+## X-Curse-Project-ID: 1614490
 ## OptionalDeps: SharedMedia, SharedMediaAdditionalFonts
 
 # ── Embedded libraries ────────────────────────────────────────────────
