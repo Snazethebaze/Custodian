@@ -1,0 +1,70 @@
+## Interface: 120007, 120100
+## Title: Custodian
+## Notes: Modular, customizable, cross-class resource & buff HUD. Bars and icons you can bind to anything and snap together.
+## Author: Snazethebaze
+## Version: 2.0.0
+## SavedVariables: CustodianDB
+## IconTexture: Interface\AddOns\Custodian\Media\Custodian.tga
+## X-Category: Combat
+## OptionalDeps: SharedMedia, SharedMediaAdditionalFonts
+
+# ── Embedded libraries ────────────────────────────────────────────────
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\AceAddon-3.0\AceAddon-3.0.lua
+Libs\AceEvent-3.0\AceEvent-3.0.lua
+Libs\AceConsole-3.0\AceConsole-3.0.lua
+Libs\AceDB-3.0\AceDB-3.0.lua
+Libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+Libs\LibCustomGlow-1.0\LibCustomGlow-1.0.xml
+Libs\LibDeflate\LibDeflate.lua
+
+# ── Core ──────────────────────────────────────────────────────────────
+Core\Theme.lua
+Core\Custodian.lua
+Defaults.lua
+Core\Media.lua
+Core\MediaPack.lua
+Core\Sound.lua
+Core\Animation.lua
+Core\Spells.lua
+Core\Probes.lua
+Core\Maintenance.lua
+Core\Groups.lua
+Core\Share.lua
+Core\Glow.lua
+Core\ColorCurve.lua
+Core\CDMBars.lua
+
+# ── Widgets (display layer) ───────────────────────────────────────────
+Widgets\Widget.lua
+Widgets\Bar.lua
+Widgets\Icon.lua
+
+# ── Trackers (data layer) ─────────────────────────────────────────────
+Trackers\Power.lua
+Trackers\Aura.lua
+Trackers\WeaponImbue.lua
+Trackers\EarthShield.lua
+Trackers\Pet.lua
+Trackers\Form.lua
+Trackers\Ally.lua
+Trackers\Manual.lua
+Trackers\Stagger.lua
+Trackers\Shatter.lua
+Trackers\DemonHunter.lua
+
+# ── Engine (wires data -> widgets, resolves layout) ───────────────────
+Core\Trackers.lua
+Core\Layout.lua
+
+# ── Options (custom settings panel) ───────────────────────────────────
+Options\UIKit.lua
+Options\Panel.lua
+Options\PanelDialogs.lua
+Options\PanelList.lua
+Options\PanelEditor.lua
+Options\Wizard.lua
+
+# ── Minimap button ────────────────────────────────────────────────────
+Core\Minimap.lua

@@ -1,0 +1,17 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.tmp
+*~
+*.swp
+.vscode/
+.idea/
+
+# Packager output
+/.release/
+
+# WoW SavedVariables (never live inside the addon folder, but just in case)
+*.lua.bak
+SavedVariables/

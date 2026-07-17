@@ -1,0 +1,16 @@
+package-as: Custodian
+
+# Embedded libraries live in Libs/ (committed), so there are no externals to fetch
+# and no separate "no-lib" package to build.
+enable-nolib-creation: no
+
+# Repo-only files that should NOT ship inside the packaged addon.
+ignore:
+  - .github
+  - .gitignore
+  - .pkgmeta
+  - README.md
+  - CHANGELOG.md
+
+# Use the repo changelog in the packaged upload.
+changelog: CHANGELOG.md

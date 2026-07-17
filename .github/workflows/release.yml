@@ -1,0 +1,29 @@
+name: Package and release
+
+# Fires when you push a version tag (e.g. `v2.0.0`). The BigWigsMods packager builds the
+# addon zip, creates a GitHub Release with it, and — once CF_API_KEY + the CurseForge project
+# id (## X-Curse-Project-ID in the .toc) are set — uploads it to CurseForge automatically.
+on:
+  push:
+    tags:
+      - '**'
+
+permissions:
+  contents: write   # let the packager create the GitHub Release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so the changelog range is correct
+
+      - name: Package and release
+        uses: BigWigsMods/packager@v2
+        env:
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}   # provided automatically — for the GitHub Release
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}       # add this secret to enable CurseForge upload
+          # WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}   # optional: WoWInterface
+          # WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}   # optional: Wago.io
